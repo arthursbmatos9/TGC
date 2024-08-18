@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage[left=25mm,right=25mm,top=25mm,bottom=25mm,paper=a4paper]{geometry}
+\usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+
+% Define o formato para os títulos das seções
+\titleformat{\section}
+  {\normalfont\bfseries\fontsize{14}{14}\selectfont\raggedright} % Fonte e estilo
+  {\thesection}{1em} % Número da seção
+  {} % Antes do título
+  [] % Após o título
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CABEÇALHO
+\title{\textbf{Documentação Implementação 2}} % titulo
+
+\author{
+  Arthur de Sá Braz de Matos\\
+  \and
+  Vitória Símil Araújo\\
+}
+\date{}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+Esta é a documentação da implementação 2 da disciplina de Teoria dos Grafos e Computabilidade. O código foi desenvolvido em C++ e tem como objetivo mostrar todos os subgrafos gerados a partir de um grafo completo com n vértices bem como o número total de subgrafos gerados.
+
+\section{Classe Grafo}
+    
+    O grafo foi armazenado através de uma lista adjacente. Seu construtor recebe o número de vértices fornecido pelo usuário e inicializa a lista com tamanho = número de vértices.
+
+    A classe possui os seguintes métodos:
+
+    \begin{itemize}
+        \item Void \textbf{addEdge(int v1, int v2)}: O método  adiciona uma aresta entre dois vértices do grafo.
+        \item Void \textbf{build()}: O método constroi um grafo completo conectando todos os pares de vértices possíveis.
+        \item Void \textbf{show(vector int subset)}: O método mostra um subgrafo resultante apenas com os vértices contidos no vetor subset.
+        \item Void \textbf{show()}: O método mostra todo o grafo.
+        \item Void \textbf{showSubgraphs()}: O método gera todos os subgrafos possíveis.
+    \end{itemize}
+
+A classe ainda possui a função bool \textbf{contains(vector int subset, int element)} que retorna se um elemento está ou não contido num vetor recebido por parâmetro.
+
+\section{Aplicação}
+
+    O método main irá pedir ao usuário que forneça um input correspondente ao número de vértices do grafo completo e em seguida instanciará um novo grafo graph(input). Em seguida, a main irá construir o grafo completo a partir do método .build() e o mesmo será mostrado através do método .show().\\
+
+    Na próxima etapa a main irá chamar o método graph.showSubgraphs(). O método irá definir a quantidade de conjuntos sem arestas possíveis com o número de vértices excluindo o conjunto vazio: noEdgesSubgraphs = pow(2, vertex). Em seguida, o método irá por meio de uma estrutura de repetição que vai de 1 até noEdgesSubgraphs, gerar todos os conjuntos os armazenando num vetor de inteiros e apartir deste vetor irá definir o número de vértices no subgrafo, o número de arestas e o número de combinações de arestas possíves, sendo que cada aresta poderá estar presente ou não: totalCombinations = 1 << subEdges.\\
+
+    Por fim, ainda dentro da primeira estrutura de repetição, o método instanciará um grafo subgraph(input), chamando o método .addEdges() para montar o subgrafo e .show(subset) para mostrar o subgrafo apenas com os vértices que estão sendo utilizados. O número de subgrafos gerados será incremetado após todas as chamadas de subgraph.show().\\
+
+    Como a aplicação indepente de ter o grafo armazenado, o método build foi construído apenas para fins de estudos.\\
+    
+    Teste de aplicação:\\
+
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Entrada} & \textbf{Grafo Esperado}                                                                                 & \textbf{Sugrafos Esperados} & \textbf{Resultado} \\ \hline
+3                & \begin{tabular}[c]{@{}c@{}}0 -\textgreater 1 2\\ 1 -\textgreater 0 2\\ 2 -\textgreater 0 1\end{tabular} & 17                          & OK                 \\ \hline
+\textless{}= 0   & Vertex number cannot be \textless{}= 0                                                                  & 0                           & OK                 \\ \hline
+0                & 0 -\textgreater{}                                                                                       & 1                           & OK                 \\ \hline
+\end{tabular}
+
+\end {document}
