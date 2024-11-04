@@ -1,1 +1,19 @@
-.
+Implemente em C++:
+
+1) Implementação de uma lista encadeada
+
+2) Implementação de uma pilha
+
+3) Implementação de uma fila
+
+4) Implementação de uma matriz de inteiros
+
+ 
+
+Aplicação:
+
+a) Realizar a inclusão de n elementos nas estruturas
+
+b) Identificar se um elemento específico está nas estruturas
+
+c) Remover k elementos das estruturas
