@@ -1,0 +1,43 @@
+## Implementação dos Artigos sobre Segmentação de Imagens
+
+### Artigo 1: "Efficient Graph-Based Image Segmentation" de Pedro F. Felzenszwalb e Daniel P. Huttenlocher
+
+A implementação deste artigo visa aprimorar a segmentação de imagens, focando na eficiência e na eficácia em cenários complexos, ao mesmo tempo que preserva a integridade visual das regiões segmentadas. A implementação foi realizada utilizando os conceitos e algoritmos propostos por Felzenszwalb e Huttenlocher, que utilizam uma abordagem baseada em grafos para segmentação.
+
+#### Conteúdo da Implementação
+
+- **toPPM.py**: Script em Python responsável pela conversão de imagens de diversos formatos (JPEG, PNG, etc.) para o formato `.ppm`, que é um formato intermediário utilizado para processamento de imagem.
+- **ImageSegmentation.cpp**: Arquivo em C++ contendo a classe principal para a segmentação de imagens. O código implementa a técnica de segmentação baseada em grafos, que agrupa pixels semelhantes em regiões.
+- **ppmToPNG.py**: Script em Python que converte arquivos no formato `.ppm` para o formato `.png`, facilitando a visualização das imagens segmentadas e permitindo um uso posterior mais conveniente.
+
+---
+
+### Artigo 2: "Graph Cuts and Efficient N-D Image Segmentation" de Yuri Boykov e Olga Veksler
+
+A implementação deste artigo aborda uma técnica de segmentação baseada no algoritmo de cortes em grafos, com o objetivo de aplicar segmentação eficiente em imagens N-dimensionais. O método proposto por Boykov e Veksler é amplamente utilizado em áreas como edição de imagens, visão computacional e análise de imagens médicas.
+
+#### Conteúdo da Implementação
+
+- **toPPM.py**: Script em Python que converte imagens de diferentes formatos (JPEG, PNG, etc.) para o formato `.ppm`, utilizado como entrada para os algoritmos de segmentação.
+- **ImageSegmentation.cpp**: Arquivo em C++ que contém a classe principal para segmentação de imagens utilizando o algoritmo de cortes em grafos. Este algoritmo divide a imagem em regiões, minimizando um custo global, o que resulta em uma segmentação eficiente e de alta qualidade.
+- **ppmToPNG.py**: Script em Python para conversão de arquivos `.ppm` para o formato `.png`, facilitando a análise visual das imagens segmentadas e seu uso posterior.
+
+---
+
+## Distribuição das Tarefas entre os Membros do Grupo
+
+A implementação dos códigos descritos nos Artigos 1 e 2, juntamente com a redação do artigo final, foi realizada de forma colaborativa. Cada membro do grupo assumiu responsabilidades em relação ao desenvolvimento do código e à elaboração do conteúdo escrito. A seguir, mostra como as tarefas foram distribuídas entre os membros do grupo.
+
+### Tarefas Realizadas Coletivamente
+
+#### 1. **Implementação do Código do Artigo 1: "Efficient Graph-Based Image Segmentation"**
+- **Responsáveis**: Guilherme Otávio, Arthur Matos
+- **Descrição**: A implementação do código para o Artigo 1 envolveu a criação de scripts e classes que aplicam a segmentação de imagem com base em grafos. Esse código foi desenvolvido a partir do artigo de Felzenszwalb & Huttenlocher e foi uma tarefa coletiva em que todos os membros contribuíram para a codificação, ajustes e testes.
+
+#### 2. **Implementação do Código do Artigo 2: "Graph Cuts and Efficient N-D Image Segmentation"**
+- **Responsáveis**: Ana Fernanda, Julia Pinheiro, Gabriel Praes
+- **Descrição**: A implementação do código para o Artigo 2 focou na aplicação do algoritmo de cortes em grafos, conforme descrito no artigo de Boykov & Veksler. A tarefa envolveu criar uma classe que aplicasse a segmentação em imagens N-dimensionais e adaptar os códigos para esse tipo de segmentação.
+
+#### 3. **Escrita do Artigo**
+- **Responsáveis**: Ana Fernanda
+- **Descrição**: Além da implementação do código, os membros do grupo também foram responsáveis pela redação do artigo que descreve as técnicas de segmentação utilizadas, a implementação do código e os resultados obtidos. A redação foi realizada em colaboração, com a divisão de seções do artigo entre os membros.

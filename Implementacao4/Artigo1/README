@@ -1,0 +1,32 @@
+# README
+
+Este projeto envolve a manipulação de imagens usando arquivos Python e C++. Siga as instruções abaixo para executar os arquivos corretamente.
+
+## Requisitos
+- Python 3 instalado.
+- Compilador `g++` instalado.
+
+## Instruções de Execução
+
+1. **Escolha uma imagem e execute o arquivo Python para processá-la.**
+   
+   No terminal, execute o seguinte comando:
+   
+   ```bash
+   python toPPM.py imagem.tipo
+   ```
+   Depois disso compile e rode os seguintes aquivos:
+
+   ```bash
+   g++ -o ImageSegmentation ImageSegmentation.cpp
+   ```
+   
+   Após isso, na pasta 'segments' haverá segmentos da imagem escolhida do tipo .ppm, para converter execute o arquivo gerado e depois execute o arquivo python para converter imagem ppm para png:
+
+   ```bash
+   python ppmToPNG.py
+   ``` 
+
+   Assim, na pasta 'convertido' haverá os segmentos da imagem escolhida convertidos para .png
+
+
